@@ -1,22 +1,118 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
-        <!-- this is a comment-->
-        <!-- hotkeys to comment ctrl + k, ctrl + c
-                    to uncomment ctrl + K, ctrl + u 
-                OR
-                    toggle with ctrl + / 
-                
-        this area of the web page is NOT display by the browser to the user
-        this area is used by the browser to render the browser, to identify
-        building requirements, used by a search engine, assign a title to your
-        browser window tab, and other functions
-        -->
         <meta charset="utf-8">
         <meta name="author" content="Don Welch">
-        <title>title of the page</title>
+        <title>Table Demo</title>
     </head>
     <body>
-        <!-- content of the body is what the browser displays to the user -->
+       <h1>Table Demo</h1>
+       <p>
+            Looking for the Best Canadian Web Hosting? We’ve reviewed the 
+            top Canadian web hosts and below you’ll find coupons and discounts for the 
+            Top Canadian Hosting providers.  More and more Canadians are looking for 
+            their website to be hosted in Canada to benefit from search engine rankings 
+            and to ensure their privacy is protected by Canadian laws.  If you’re a Canadian 
+            business looking for a suitable hosting provider then take a look at our list 
+            below of Canadian web hosts.
+       </p>
+       <!-- A table has several components
+            A table typically consists of a set of column headers, the row data and optionally a footer area for comments or messages
+        
+            However, you can design your table to any style you wish by using various style techiques such as merging columns, merging rows, merging columns and rows, placing column headers on a data row, etc....
+        
+            Typically, you will see a table as a tabular grid
+
+            Tables ARE NOT to be used to layout your web page content, that should be done using css styling
+        -->
+        <!-- the border error on the table tag is a known error
+             UNTIL css is covered, this error will be acceptable-->
+
+        <table border="1">
+            <!-- all content within a table tag set is one table
+                header use <thead>
+                body use <tbody>
+                footer use <tfoot>
+            
+                a row in any section has a <tr> tag set
+                
+                within a row you will have several cells
+                header cells use <th>
+                data cells use <td>
+                -->
+            <thead>
+                <!-- area is used for column headers
+                     by default text is bolded
+                     use one <th> tag set for each column-->
+                <tr>
+                    <th>Host Name</th>
+                    <th>Bandwidth</th>
+                    <th>Price</th>
+                    <th>Money Back</th>
+                    <th>Coupon</th>
+                    <th>Rating</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- the tbody contains the data for the table
+                     each row represents a single row of the table
+                     think of a grid system (tabular)
+                    
+                     it is expected that you will have one data cell
+                      for each column header cell
+                    
+                    basic structure
+                        <tr>
+                            <td>...</td>
+                             <td>...</td>
+                                ...
+                        </tr>
+                    -->
+                <tr>
+                    <td>HostUpon</td>
+                    <td>Unlimited</td>
+                    <td>$3.69/mo</td>
+                    <td>30 day</td>
+                    <td>15% off</td>
+                    <td>5</td>
+                    <td><img src="img/phone.png" alt="phone"></td>
+                </tr>
+                <tr>
+                    <td>BlueHost</td>
+                    <td>Unlimited</td>
+                    <td>$6.99/mo</td>
+                    <td>anytime</td>
+                    <td>$3.95*</td>
+                    <td>3</td>
+                    <td><img src="img/money.png" alt="money"></td>
+                </tr>
+                <tr>
+                    <td>HostGator</td>
+                    <td>Unlimited</td>
+                    <td>$3.71/mo</td>
+                    <td>45 days</td>
+                    <td>20%</td>
+                    <td>4</td>
+                    <td><img src="img/server.png" alt="server"></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <!-- 
+                    the tfoot area is generally used for totals, special messages, comments, etc
+
+                    data cells <td> CAN be merged
+                    to set of merged <td> set of cells use the parameter colspan="n" where n is the number of cells to merge
+                    the maximum merge cells should NOT exceed the total number of columns
+                -->
+                <tr>
+                    <td colspan="6">
+                        * limited to 3 months of service
+                    </td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+            
     </body>
 </html>
