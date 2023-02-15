@@ -4,20 +4,46 @@
 
         <meta charset="utf-8">
         <meta name="author" content="Don Welch">
-        <title>title of the page</title>
+        <title>CSS Introduction Concepts</title>
+        <!-- this is the embedded styling for THIS page
+             the selectors code using this style of css affects ALL instances
+                of the selector on the page
+             IF a element selector has an inline style that is of the same rule
+                as in the embedded style the inline style is said to "Last rule wins"
+                which means the the inline style will be the style used-->
+        <style>
+            h1 {
+                color: red;
+            }
+            p {
+                background-color:darksalmon;
+                font-family: 'Times New Roman', Times, serif;
+            }
+        </style>
     </head>
     <body>
         <header>
             <h1>CSS Styling Techniques</h1>
             <ul>
-                <li><a href="index.html" target="_blank">Home</a></li>
-                <li><a href="index-inline.html" target="_blank">Inline</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index-inline.html">Inline</a></li>
                 <li><a href="#">Embedded</a></li>
-                <li><a href="index-stylesheet.html" target="_blank">Using StyleSheet</a></li>
+                <li><a href="index-stylesheet.html">Using StyleSheet</a></li>
             </ul>
        </header>
        <main>
-
-       </main>
+        <section>
+            <h2>Sample Embedded CSS</h2>
+            <p style="background-color: aqua; font-family: Calibri;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium ad voluptatum? Soluta architecto officia nihil vel voluptatem repellendus dolore quia libero. Qui blanditiis quia ea dolore odio magnam ipsa. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab hic, sunt assumenda ullam blanditiis officiis quae, rerum corporis itaque suscipit quia reprehenderit? Explicabo id voluptates quasi aspernatur quaerat quia iure! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quidem provident, assumenda obcaecati maiores quo debitis vel voluptatum fuga sed quibusdam, amet aliquam deserunt! Harum sunt a quas atque ducimus!
+            </p>
+            <p style="color:forestgreen; font-weight: bold;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium ad voluptatum? Soluta architecto officia nihil vel voluptatem repellendus dolore quia libero. Qui blanditiis quia ea dolore odio magnam ipsa. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab hic, sunt assumenda ullam blanditiis officiis quae, rerum corporis itaque suscipit quia reprehenderit? Explicabo id voluptates quasi aspernatur quaerat quia iure! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quidem provident, assumenda obcaecati maiores quo debitis vel voluptatum fuga sed quibusdam, amet aliquam deserunt! Harum sunt a quas atque ducimus!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium ad voluptatum? Soluta architecto officia nihil vel voluptatem repellendus dolore quia libero. Qui blanditiis quia ea dolore odio magnam ipsa. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab hic, sunt assumenda ullam blanditiis officiis quae, rerum corporis itaque suscipit quia reprehenderit? Explicabo id voluptates quasi aspernatur quaerat quia iure! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quidem provident, assumenda obcaecati maiores quo debitis vel voluptatum fuga sed quibusdam, amet aliquam deserunt! Harum sunt a quas atque ducimus!
+            </p>
+        </section>
+   </main>
     </body>
 </html>

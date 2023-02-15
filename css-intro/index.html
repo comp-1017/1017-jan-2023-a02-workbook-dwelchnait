@@ -11,9 +11,9 @@
             <h1>CSS Styling Techniques</h1>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="index-inline.html" target="_blank">Inline</a></li>
-                <li><a href="index-embedded.html" target="_blank">Embedded</a></li>
-                <li><a href="index-stylesheet.html" target="_blank">Using StyleSheet</a></li>
+                <li><a href="index-inline.html">Inline</a></li>
+                <li><a href="index-embedded.html">Embedded</a></li>
+                <li><a href="index-stylesheet.html">Using StyleSheet</a></li>
             </ul>
        </header>
        <main>
@@ -23,7 +23,7 @@
                     <tbody>
                         <tr>
                             <td>Browser Defaults</td>
-                            <td>you have not supplied any css code</td>
+                            <td width="400px">you have not supplied any css code</td>
                             <td></td>
                             <td></td>
                         </tr>
@@ -32,6 +32,20 @@
                             <td>This is for a single specific element (tag) instance. The e;e,emt contains a parameter called style=""</td>
                             <td>style="rule; [rule; ...]"</td>
                             <td>style="color:red; width:50px;"</td>
+                        </tr>
+                        <tr>
+                            <td>Embedded</td>
+                            <td>Coded inyour head area of the web page. Is started with the style element and contains the selectors and rules for the desired CSS. Applies ONLY to the phyiscal page where the code is placed. Affects all selectors on the page.</td>
+                            <td>&lt;style&gt;<br/>selector {rule; [rule; ...]}<br/>selector {rule; [rule; ...]}<br/>&lt;/style&gt;</td>
+                            <td>&lt;style&gt;<br/>p {font-size:large; font-weight:bold;}<br/>blockquote {width:350px}<br/>&lt;/style&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>StyleSheet</td>
+                            <td>Similar to embedded however, the selectors and rules are code in a separater physical file. This file can be shared throughout
+                                the entire web site. Thus, all css is in one common place. This is the preferred technique to use. To use the style sheet on a particular web page, you must reference the stylesheet using a &lt;link&gt; tag. This link tag needs to be in the head area.
+                            </td>
+                            <td>selector {rule; [rule; ...]}<br/>selector {rule; [rule; ...]}</td>
+                            <td>p {font-size:large; font-weight:bold;}<br/>blockquote {width:350px}</td>
                         </tr>
                     </tbody>
                 </table>
