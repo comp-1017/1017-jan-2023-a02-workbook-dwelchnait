@@ -1,0 +1,140 @@
+/*
+This demo is introducing selectors and css styling (layout and topography)
+
+selectors can be represented by
+    a) html (element) tags
+    b) class names
+    c) id names
+    d) contain psuedo classes
+
+selectors can be singular, can be grouped as multiples
+multiples using are used when the rules apply to all tags
+you can have multiple references to the same selector BUT
+   containing different rules
+mulitple references to the same selector accumulates all rules for that
+   selector
+IF you have the same selector in different places and the same rule
+  in which occurance BUT the value for the css item is different
+  then the last declaration is the rule in effect
+
+The is the effect of inheritence between element tags
+*/
+
+/*
+    multiple selectors
+
+    a rule generally consists of an ->   attribute:value;
+*/
+body, h1, h2,
+h3,
+h4, p{
+    padding: 0;
+    margin: 0;
+}
+
+/*
+    the color rule is using the rgb setting for the color as a hex code
+    hex code for a color consists of 3 values representing red, green
+       and blue
+    the values for each color is 2 characters
+    the characters represent a value from 0 to 255
+    the characters are 0 to 15 (0,1,2,3...9,a,b,c,d,e,f)
+    to hex characters make up a value for a color 00 (absence) to 
+       ff (full)
+    example black #000000
+            white #ffffff
+    there is a shortcut that can be used if ALL characters of the value
+        are the same
+    example black #000
+            white #fff
+*/
+
+/*
+  example of rule accumulation of an element
+  */
+  body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #777;
+  }
+
+  /*
+ "last rule wins"
+ if you have previously create a rule on a selector then
+    later re-declared the rule with a new value
+    the re-declaration rule (last rule) is the rule that will be
+    in effect
+this also affect inheritence between elements
+  */
+  footer{
+    padding: 40px;
+    background-color: #dedede;
+  }
+  h1{
+    padding: 48px;
+    color: forestgreen;
+    /* 
+    there are places where you can short cut a css item
+        rule*/
+    /*
+    border-bottom-width: 10px;
+    border-bottom-style: solid;
+    border-bottom-color: #dedede; */
+    border-bottom: 10px solid #dedede;
+  }
+
+  /* child selector
+
+  this is an element selector with another element that is NOT
+  necessarily (phyiscally) directly below the parent selector
+
+  Upper element (parent)
+   with the parent element, some other element (child) is used
+
+  every instance of the cild element is affected by the rule
+  */
+
+  main p{
+    font-style: italic;
+  }
+
+  /* decendant selector
+
+  this selector resembles the child selector BUT differs in that the
+    elements are directly below (next level) of the parent(s) selector
+
+  this will allow the developer to tightly and directly reference using
+     a chain of element to target a specific set of html
+*/
+footer h2{
+    color:#c0c0c0;
+}
+
+main section h2{
+    color: #770000;
+}
+
+/* Classes
+
+syntax for naming is:  .developer-name { rules }
+you CAN NOT use element names
+developer-name must be meaningful (course standard)
+classes can be attached to any element
+classes are independent of an element
+on your html element, to use:  class="developer-name [developer-name ...]"
+if you have multiple classes for a class parameter separate the names 
+   by a space
+
+types: developer (targetted) class
+       psuedo, these are attached to an element
+
+*/
+
+.menu-items{
+    font-family: courier, sans-serif;
+    list-style-type: none;
+    width: 600px;
+    padding: 24px;
+    border-left: 5px solid red;
+    background-color: #f4f4f4;
+    margin-left: 24px;
+}
