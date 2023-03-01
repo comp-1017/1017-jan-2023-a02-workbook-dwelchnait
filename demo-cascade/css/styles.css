@@ -1,0 +1,63 @@
+footer {
+    background-color: #333;
+}
+
+/* 
+    multiple selectors, child selector
+*/
+
+footer,
+footer a {
+ color:white;
+}
+
+/*
+    decendant (targeted)
+*/
+nav ul{
+    background-color: #ddd;
+}
+
+nav ul li {
+    border-bottom: 1px solid #333;
+}
+
+nav ul li a{
+    color: #333;
+    text-decoration: none;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+/*
+ Classes have a value of 10
+ Pseudo classes are existing classes that can be used on html elements
+
+ a:link
+ a:hover
+ a:visited
+ a:active
+ 
+*/
+
+nav ul li a:hover{
+    color: blue;
+    font-weight: bold;
+    /* font-size: 48px; */
+}
+
+/*
+ target class selector
+    used to be more specific when selecting elements and have a higher priority
+     than simple element selectors alone
+*/
+ul.navigation {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sideborder{
+    border-left: 3px solid orange;
+}
