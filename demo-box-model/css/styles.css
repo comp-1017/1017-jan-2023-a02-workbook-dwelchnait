@@ -1,0 +1,102 @@
+/*************************************************
+margin: the outter most part of the box model
+        represents separation BETWEEN boxes
+        horizontal margins are added together
+        vertical margins are COLLASPED
+            if the vertical margins are positive then
+            the larger of the two margins are used
+
+            example top box: margin-bottom of 40px
+                    bottom bpx: margin-top of 30 px
+
+                    the vertical distance between the two boxes is 40
+
+                    left box: margin-right of 40px
+                    right box: margin-left of 30 px
+                    the horzintal distance between the two boxes is 70
+
+syntax: margin can be code in various styles
+long hand (order does not matter);
+    margin-top: size; margin-right: size; margin-bottom: size; margin-left: size;
+short hands (order DOES matter)
+    equal opposite sides:  margin: tbsize rlsize;
+    unequal sides: margin: tsize rsize bsize lsize;
+    all equal sides : margin: size;
+******************************************************************/
+.margin-section{
+    /* margin-right:12px;
+    margin-bottom: 24px;
+    margin-top: 24px;
+    margin-left:12px; */
+    /* margin: 24px 12px; */
+    margin: 24px 12px 24px 12px;
+    border: 1px dashed red;
+}
+
+/**************************************************
+border: the second part of the box model
+        represents the outter displaybale edge of the box
+
+syntax:  can be code in various styles
+long hand
+  border-width: size; border-style: style; border-color: colour;
+  short hand
+  border: size style color;
+************************************************/
+
+.border-section{
+    border-width: 3px;
+    border-style:solid;
+    border-color: black;
+}
+
+/******************************************
+paddig: the third part of the bxo
+        represents separation BETWEEN the border and content of the box
+        this is the inner separation of content and box
+
+syntax: padding can be code in various styles
+long hand (order does not matter);
+    padding-top: size; padding-right: size; padding-bottom: size; padding-left: size;
+short hands (order DOES matter)
+    equal opposite sides:  padding: tbsize rlsize;
+    unequal sides: padding: tsize rsize bsize lsize;
+    all equal sides : padding: size;
+******************************************************************/
+
+.padding-section{
+    padding: 24px;
+    border: 1px dotted forestgreen;
+}
+
+/***********************************************************
+content: the fourth component of the box model
+         by default this is the dispaly area of your element content
+         the size of the content are is dependent on whether there
+             are margin, border and/or padding specified for the element
+         if no margin, border and/or padding is specified then
+             content is the entire width of the browser page.
+         you CAN alter the amount of area covered horizontally on the
+             browser page for the element by using the width rule.
+         by default the height of an element is determind by the amount of content
+             within the element, it expands automatically
+         you CAN limit the amount of area vertically by using the
+             height rule.
+
+When you start placing multiple elements on the same physical line
+    on your browser (using flexbox, floats, CSS-Grid) you will need
+    to do calculates to appropriately place your elements
+
+calculation of a box
+   box size = lm + lb + lp + content + rp + rb + rm
+
+***************************************************************/
+
+.width-section{
+    margin:24px;
+    padding:12px;
+    border:3px solid red;
+    width: 500px;
+    height:130px;
+    overflow:scroll;
+}
