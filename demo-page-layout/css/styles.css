@@ -1,0 +1,68 @@
+body {
+	background-color: white;
+}
+
+ .container {
+	margin:0 auto;
+	width:960px;
+	font-size: 100%;
+	line-height: 1.5;
+	/* background-color: white; 
+	border: 1px solid black;*/
+	text-align: center;  /*typography css*/
+} 
+
+/***********************************************
+		Layout CSS
+************************************************/
+
+nav{
+	margin-top: 48px;
+	background-color: #ddd;
+}
+
+header,
+main {
+	height:450px;
+	background-color: #ddd;
+	margin-top: 24px;
+}
+
+main{
+	height: 800px;
+}
+
+footer{
+	height: 150px;
+	margin: 24px 0 48px 0;
+	background-color: #ddd;
+}
+
+/*******************************************
+	One does not know the width of the
+			section.
+
+	How can one calculate the width of the
+			section element?
+
+	The section element has its own box.
+	Using the box model formula, one can
+	   calculate the width (content width)
+	   for the element.
+
+	box model formula
+
+	total width = lm + lb + lp + content width = rp + rb + rm
+	        960 = 30 + 2 + 0 + cw + 0 + 2 + 30
+			960 = 64 + cw
+       960 - 64 = cw
+	        896 = cw
+			
+***************************************************/
+main section{
+	width: 896px;
+	background-color: white;
+	margin: 30px;
+	border: 2px solid black;
+	height: 200px;
+}
