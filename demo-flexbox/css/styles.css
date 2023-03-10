@@ -1,0 +1,100 @@
+body {
+	background-color: white;
+}
+
+ .container {
+	margin:0 auto;
+	width:960px;
+	font-size: 100%;
+	line-height: 1.5;
+	text-align: center;
+	background-color: lightgrey;
+} 
+
+h1{
+	font-size: 48px;
+}
+
+/**************************************************************
+box model formula
+
+		page size = 3(lm + lb + lp + cw + rp + rb + rm) + remainder
+		      960 = 3(30 + 2 + 0 + cw + 0 + 2 + 0) +30
+			  960 = 3(cw) + 132
+			  (960 - 132) /3 = cw
+			  828 / 3 = cw
+			  276 = cw
+
+		page size = lm + lb + lp + cw + rp + rb + rl
+		      960 = 30 + 2 + 0 + cw + 0 + 2 +30
+			  960 = 64 + cw
+			  896 = cw
+
+**************************************************************/
+main div{
+	height:300px;
+	width: 276px;
+	margin: 10px 0 10px 30px;
+	border: 2px solid black;
+}
+
+div.green-paint{
+	height: 100px;
+	width: 896px;
+	margin: 10px 30px;
+	border: 2px solid black;
+}
+
+.red-paint{
+	background-color: red;
+}
+
+.blue-paint{
+	background-color: blue;
+}
+
+.yellow-paint{
+	background-color: yellow;
+}
+
+.green-paint{
+	background-color: green;
+}
+
+/*****************************************************************
+
+Demo css stylign using Flexbox
+
+Default display  of elments onyour page is based on their block default
+block elements will be stacked
+inline block elements will be on the same line
+
+problem is: how to "command" block elements to be on the same line
+
+to get your block elements on the same line we can use various techniques such as
+	a)floats
+	b) flexbox <---- we will be examining
+	c) CSS GRID (is a true multiple layout tool)
+
+to invoke flexbox the rule is
+		display: flex;
+
+flexbox basic restrictions:
+
+a) affects ONLY the immediate "level" below where the flex is assigned
+b) affects ALL elements at the immediate level
+c) by default all elements at the same level will have their size
+    (content width) automatically adjusted so that the element will 
+	fit on the same line. (proportionally)
+
+
+to keep the specified width of your content area for an element while
+	using flexbox; you will need to adjust the default flex-wrap (which is nowrap)
+use the rule:
+    flex-wrap: wrap;
+*****************************************************************/
+
+main{
+	display: flex;
+	flex-wrap: wrap;
+}
